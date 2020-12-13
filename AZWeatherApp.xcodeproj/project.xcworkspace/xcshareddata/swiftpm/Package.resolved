@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": null,
+          "revision": "9e0328127dfb801cefe8ac53a13c0c90a7770448",
+          "version": "5.4.0"
+        }
+      },
+      {
+        "package": "Bond",
+        "repositoryURL": "https://github.com/DeclarativeHub/Bond",
+        "state": {
+          "branch": null,
+          "revision": "146943c0bc03a93c48fb6c57db4e39f4b38ba74b",
+          "version": "7.8.1"
+        }
+      },
+      {
+        "package": "Differ",
+        "repositoryURL": "https://github.com/tonyarnold/Differ.git",
+        "state": {
+          "branch": null,
+          "revision": "4c3eb4d76ad5c14075829397a5741b0badb08dce",
+          "version": "1.4.5"
+        }
+      },
+      {
+        "package": "KeychainSwift",
+        "repositoryURL": "https://github.com/evgenyneu/keychain-swift",
+        "state": {
+          "branch": null,
+          "revision": "96fb84f45a96630e7583903bd7e08cf095c7a7ef",
+          "version": "19.0.0"
+        }
+      },
+      {
+        "package": "ReactiveKit",
+        "repositoryURL": "https://github.com/DeclarativeHub/ReactiveKit.git",
+        "state": {
+          "branch": null,
+          "revision": "5b167a3fa7288395cfcba23dac84489b01d3b2f0",
+          "version": "3.18.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

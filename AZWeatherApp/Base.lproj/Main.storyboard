@@ -1,24 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="WeatherViewController" customModule="AZWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbq-9v-9Qe">
+                                <rect key="frame" x="207" y="88" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijs-N3-s2W">
+                                <rect key="frame" x="207" y="96" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="96"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cI-LJ-URU">
+                                <rect key="frame" x="207" y="104" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="775-hv-TxC">
+                                <rect key="frame" x="0.0" y="168" width="414" height="728"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="1sQ-gt-M1Y"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uay-da-xK4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="775-hv-TxC" firstAttribute="top" secondItem="7cI-LJ-URU" secondAttribute="bottom" constant="64" id="0q9-sL-KMn"/>
+                            <constraint firstItem="7cI-LJ-URU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1gd-kF-Yoj"/>
+                            <constraint firstAttribute="bottom" secondItem="775-hv-TxC" secondAttribute="bottom" id="44N-l2-Jo4"/>
+                            <constraint firstItem="Ijs-N3-s2W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4oX-q5-f0I"/>
+                            <constraint firstItem="Ijs-N3-s2W" firstAttribute="top" secondItem="wbq-9v-9Qe" secondAttribute="bottom" constant="8" symbolic="YES" id="8ij-rI-nXe"/>
+                            <constraint firstItem="775-hv-TxC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S1J-kA-Xj7"/>
+                            <constraint firstItem="wbq-9v-9Qe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="WFO-51-3v6"/>
+                            <constraint firstItem="wbq-9v-9Qe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jLt-j5-FB6"/>
+                            <constraint firstItem="7cI-LJ-URU" firstAttribute="top" secondItem="Ijs-N3-s2W" secondAttribute="bottom" constant="8" symbolic="YES" id="u3o-fi-8Cp"/>
+                            <constraint firstItem="775-hv-TxC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yAK-aH-ZgC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityName" destination="wbq-9v-9Qe" id="SXe-x8-S61"/>
+                        <outlet property="forecastTableView" destination="775-hv-TxC" id="WS0-Ri-48V"/>
+                        <outlet property="temperature" destination="Ijs-N3-s2W" id="mn7-an-bbq"/>
+                        <outlet property="weatherDescription" destination="7cI-LJ-URU" id="nXk-se-hUd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-352.17391304347831" y="110.49107142857143"/>
         </scene>
     </scenes>
 </document>
